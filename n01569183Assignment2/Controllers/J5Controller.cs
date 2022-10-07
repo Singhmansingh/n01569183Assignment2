@@ -10,6 +10,19 @@ namespace n01569183Assignment2.Controllers
 {
     public class J5Controller : ApiController
     {
+        /// <summary>
+        /// Determine if it is possible to escape from a room. You start at top left (1,1), and need to
+        /// move to bottom right (m,n). If you are in a cell of value x, then you can jump to any cell (a,b)
+        /// such that a x b = x. 
+        /// </summary>
+        /// <param name="m">Integer of rows (1 to 1000)</param>
+        /// <param name="n">Integer of columns (1 to 1000)</param>
+        /// <param name="rows">Catch all string of row contents. Each cell seperated by a ' '.</param>
+        /// <returns>Boolean value</returns>
+        /// <example>
+        /// GET: api/j5/EscapeRoom/3/4/3 10 8 14/1 11 12 12/6 2 3 9 -> TRUE
+        /// GET: api/j5/EscapeRoom/3/4/3 10 2 14/1 11 1 1/5 2 3 9 -> FALSE
+        /// </example>
         [HttpGet]
         [Route("api/j5/EscapeRoom/{m}/{n}/{*rows}")]
         public string EscapeRoom(int m, int n, string rows)

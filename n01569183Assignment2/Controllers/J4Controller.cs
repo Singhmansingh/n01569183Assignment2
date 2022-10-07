@@ -9,6 +9,16 @@ namespace Week4Practice.Controllers
 {
     public class J4Controller : ApiController
     {
+        /// <summary>
+        /// Determines if a text contains a cyclic shift of a specified string
+        /// </summary>
+        /// <param name="t">String text</param>
+        /// <param name="s">String cyclic shift to check</param>
+        /// <returns>Boolean value</returns>
+        /// <example>
+        /// GET: api/j4/cyclic/ABCCDEABAA/ABCDE -> TRUE
+        /// GET: api/j4/cyclic/ABCDDEBCAB/ABA -> FALSE
+        /// </example>
         [HttpGet]
         [Route("api/j4/cyclic/{t}/{s}")]
         public bool Cyclic(string t, string s)
