@@ -1,6 +1,7 @@
 ﻿using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -17,7 +18,7 @@ namespace n01569183Assignment2.Controllers
         /// lies inside the frame. 
         /// </summary>
         /// <param name="drops">Integer total drops</param>
-        /// <param name="coordinates">Catch all param for coordinates. format as xx, yy. Seperated by / </param>
+        /// <param name="coordinates">Catch all param for coordinates. format as xx,yy. Seperated by / </param>
         /// <returns>String representation of frame corner coordinates</returns>
         /// <example>
         /// GET: api/j3/Art/5/44,62/34,69/24,78/42,44/64,10 -> 23,9|65,79
@@ -28,12 +29,13 @@ namespace n01569183Assignment2.Controllers
         {
             string[] inputs = coordinates.Split('/');
             string[] stringCoordinate = inputs[0].Split(',');
-            int[] bottom = new int[] { int.Parse(stringCoordinate[0]), int.Parse(stringCoordinate[1]) };
-            int[] top = new int[] { 0, 0 };
+            int[] bottom = new int[] { int.Parse(stringCoordinate[0]) - 1, int.Parse(stringCoordinate[1]) - 1 };
+            int[] top = new int[] {0, 0 };
+            Debug.Write(stringCoordinate);
             int x = 0;
             int y = 0;
 
-            for (int i = 0; i <= drops; i++)
+            for (int i = 0; i < drops; i++)
             {
                 stringCoordinate = inputs[i].Split(',');
                 x = int.Parse(stringCoordinate[0]);
