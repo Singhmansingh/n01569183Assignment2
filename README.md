@@ -3,6 +3,13 @@ These are my attempts at the questions featured in the CCC 2020 Junior competiti
 
 Test data for these questions can be found [here](https://www.cemc.uwaterloo.ca/contests/computing/past_ccc_contests/2020/index.html).
 
+## Table of Contents
+1. [J1 - Dog Treats](#j1---dog-treats)
+2. [J2 - Epidemiology](#j2---epidemiology)
+3. [J3 - Modern Art](#j3---modern-art)
+4. [J4 - Cyclic Shift](#j4---cyclic-shift)
+5. [J5 - Escape Room](#j5---escape-room)
+
 ## J1 - Dog Treats
 Barley the dog loves treats. At the end of the day he is either happy or sad depending on the number and size of treats he receives throughout the day. The treats come in three sizes: small, medium, and large. His happiness score can be measured using the following formula: 
 
