@@ -9,7 +9,7 @@ Barley the dog loves treats. At the end of the day he is either happy or sad dep
     1 × S + 2 × M + 3 × L
 ### Format
 ```bash
-.../api/j1/DogTreats/{small}/{medium}/{large}
+.../api/CCC/DogTreats/{small}/{medium}/{large}
 ```
 
 ### Params
@@ -35,7 +35,7 @@ use a simple model. When a person has a disease, they infect exactly R other peo
 had the disease.
 ### Format
 ```bash
-.../api/j2/Epidemiology/{P}/{N}/{R}
+.../api/CCC/Epidemiology/{P}/{N}/{R}
 ```
 ### Params
 - P = Integer. # maximum number of people infected. Assume P <= 10<sup>7</sup>
@@ -63,7 +63,7 @@ inside the frame.
 
 ### Format
 ```bash
-.../api/j3/Art/{N}/{* drop locations}
+.../api/CCC/ModernArt/{N}/{* drop locations}
 ```
 
 ### Params
@@ -77,7 +77,7 @@ String. lower left and upper right boundary locations. Formatted as `lowerX,lowe
 ### Example
 | Protocol | Input | Output |
 | --- |---|---|
-| GET | `../Art/5/44,62/34,69/24,78/42,44/64,10`| 23,9 \| 65,79 |
+| GET | `../ModernArt/5/44,62/34,69/24,78/42,44/64,10`| 23,9 \| 65,79 |
 ___
 
 ## J4 - Cyclic Shift
@@ -87,7 +87,7 @@ from the beginning of the string to the end of the string. We also consider a st
 shift of itself. For example, the cyclic shifts of `ABCDE` are: `ABCDE, BCDEA, CDEAB, DEABC, and EABCD`.
 ### Format
 ```bash
-.../api/j4/Cyclic/{Sequence}/{Cyclic Shift}
+.../api/CCC/CyclicShift/{Sequence}/{Cyclic Shift}
 ```
 
 ### Params
@@ -101,8 +101,8 @@ Boolean. Represents if the sequence contains a cyclic shift of the query sequenc
 ### Example
 | Protocol | Input | Output |
 | --- |---|---|
-| GET | `../cyclic/ABCCDEABAA/ABCDE` | true |
-| GET | `../cyclic/ABCDDEBCAB/ABA` | false |
+| GET | `../CyclicShift/ABCCDEABAA/ABCDE` | true |
+| GET | `../CyclicShift/ABCDDEBCAB/ABA` | false |
 
 ---
 
@@ -122,7 +122,7 @@ possible.
 
 ### Format
 ```bash
-.../api/j5/EscapeRoom/{m}/{n}/{* row data}
+.../api/CCC/EscapeRoom/{m}/{n}/{* row data}
 ```
 
 ### Params
