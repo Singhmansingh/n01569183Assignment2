@@ -1,7 +1,7 @@
 # Assignment 2 - UoW CCC 2020 Solutions
-This is my attempts at the questions featured in the CCC 2020 Junior competition.
+These are my attempts at the questions featured in the CCC 2020 Junior competition.
 
-Test data for these questions can be found [here]().
+Test data for these questions can be found [here](https://www.cemc.uwaterloo.ca/contests/computing/past_ccc_contests/2020/index.html).
 
 ## J1 - Dog Treats
 Barley the dog loves treats. At the end of the day he is either happy or sad depending on the number and size of treats he receives throughout the day. The treats come in three sizes: small, medium, and large. His happiness score can be measured using the following formula: 
