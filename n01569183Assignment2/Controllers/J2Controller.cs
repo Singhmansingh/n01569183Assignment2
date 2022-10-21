@@ -19,7 +19,7 @@ namespace n01569183Assignment2.Controllers
         /// <returns>Integer number of days</returns>
         /// <example>
         /// GET: api/j2/epidemiology/750/1/5 -> 4
-        /// GET: api/j2/epidemiology/10/2/1 -> 1
+        /// GET: api/j2/epidemiology/10/2/1 -> 5
         /// </example>
         [HttpGet]
         [Route("api/j2/epidemiology/{p}/{n}/{r}")]
